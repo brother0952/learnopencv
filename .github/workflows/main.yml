@@ -1,0 +1,17 @@
+name: Simple Test Demo
+
+# 触发时机：push 代码的时候触发
+on: push
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 打印欢迎信息
+        run: echo "✅ GitHub Actions 跑起来啦！"
+
+      - name: 打印一些环境信息
+        run: |
+          echo "仓库地址: ${{ github.repository }}"
+          echo "提交者: ${{ shturl.cc/Sh }}"
+          echo "提交信息: ${{ github.event.head_commit.message }}"
